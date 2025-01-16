@@ -1,5 +1,5 @@
 {% set name = "conda-spawn" %}
-{% set version = "0.0.2" %}
+{% set version = "0.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 3998038df0eb1242b1c015c4b3f074d6a1dd97db861432daa406929fe83c5399
+  sha256: bbf1c86b7d8b46172ff51ef618a41d811cfaad97fb3688d9e20372d639c1dd48
 
 build:
   number: 0
@@ -38,7 +38,7 @@ test:
 
 about:
   home: https://github.com/conda-incubator/conda-spawn
-  license: MIT
+  license: MIT AND BSD-3-Clause
   license_file: LICENSE
   summary: Activate conda environments in new shell processes
   dev_url: https://github.com/conda-incubator/conda-spawn
