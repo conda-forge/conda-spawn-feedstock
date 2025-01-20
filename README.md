@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/conda-spawn-fee
 
 Home: https://github.com/conda-incubator/conda-spawn
 
-Package license: MIT
+Package license: MIT AND BSD-3-Clause
 
 Summary: Activate conda environments in new shell processes
 
