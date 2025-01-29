@@ -1,5 +1,5 @@
 {% set name = "conda-spawn" %}
-{% set version = "0.0.4" %}
+{% set version = "0.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 2f6f175cbc5e23446cceb14cac9904663b7fa9702f923868737b0ea8d94113ee
+  sha256: 9160a6da2fdab03c23819fdaacbe3041da6f2979e2fcbb6f29629ee90f01c108
 
 build:
   number: 0
