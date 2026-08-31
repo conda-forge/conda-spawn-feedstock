@@ -3,13 +3,13 @@ About conda-spawn-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/conda-spawn-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/conda-incubator/conda-spawn
+Home: https://github.com/conda/conda-spawn
 
 Package license: MIT AND BSD-3-Clause
 
 Summary: Activate conda environments in new shell processes
 
-Development: https://github.com/conda-incubator/conda-spawn
+Development: https://github.com/conda/conda-spawn
 
 Current build status
 ====================

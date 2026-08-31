@@ -1,0 +1,57 @@
+schema_version: 1
+
+context:
+  version: "0.2.0"
+
+package:
+  name: conda-spawn
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/c/conda-spawn/conda_spawn-${{ version }}.tar.gz
+  sha256: 140d45927ae07ea3ab72e07424fda26fcc3d00d26bff1221f7ab00087503ca32
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - hatchling >=1.12.2
+    - hatch-vcs >=0.2.0
+  run:
+    - python >=${{ python_min }}
+    - conda >=23.9.0
+    - pexpect
+    - shellingham
+
+tests:
+  - python:
+      imports:
+        - conda_spawn
+        - conda_spawn.main
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+    script:
+      - python -m conda spawn --help
+      - python -m conda shell --help
+
+about:
+  homepage: https://github.com/conda/conda-spawn
+  repository: https://github.com/conda/conda-spawn
+  license: MIT AND BSD-3-Clause
+  license_file: LICENSE
+  summary: Activate conda environments in new shell processes
+
+extra:
+  recipe-maintainers:
+    - jezdez
+    - jaimergp
